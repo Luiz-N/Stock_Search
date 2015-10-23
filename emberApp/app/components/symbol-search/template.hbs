@@ -1,0 +1,12 @@
+{{yield}}
+
+<div class="text-centered">
+  {{ember-selectize
+    content=contentArray
+    optionValuePath="content.symbol"
+    optionLabelPath="content.name"
+    placeholder="Search companies"
+    selection=symbolInput
+    select-item=updateModel
+  }}
+</div>
