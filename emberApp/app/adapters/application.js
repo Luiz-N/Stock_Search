@@ -9,7 +9,7 @@ export default DS.RESTAdapter.extend({
       var url = this._super();
       var todayDate = moment().format('YYYY-MM-DD');
       var monthAgoDate = moment().subtract(3,'month').format('YYYY-MM-DD');
-      return url + id.toUpperCase() + '.json?start_date='+monthAgoDate+'&end_date='+todayDate+'&api_key=CRiqekt2NdsyVWsyex7h';
+      return url + id.toUpperCase() + '.json?start_date='+monthAgoDate+'&end_date='+todayDate+'&api_key=b62svkeDHjV3EcEvFcFM';
     }
   },
 });
