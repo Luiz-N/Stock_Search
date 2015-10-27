@@ -2,7 +2,7 @@ import DS from 'ember-data';
 
 export default DS.RESTAdapter.extend({
   host: 'https://www.quandl.com',
-  namespace: 'api/v3/datasets/EOD/',
+  namespace: 'api/v3/datasets/WIKI/',
 
   urlForFindRecord: function(id) {
     if (id) {

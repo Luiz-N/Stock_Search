@@ -7,7 +7,7 @@ export default Ember.Service.extend({
   fetch: Ember.computed('init', function () {
     var service = this;
     $.ajax({
-      url: 'http://localhost:4567/company_list',
+      url: 'https://whispering-sands-7333.herokuapp.com/company_list',
       type: 'GET',
       accepts: 'application/json',
       success: function(data) {

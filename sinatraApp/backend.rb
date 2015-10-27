@@ -33,5 +33,5 @@ settings.companies_collection.insert_many(companies)
 
 get '/company_list' do
 	response['Access-Control-Allow-Origin'] = '*'
-	settings.companies_collection.find().to_a.to_json
+	settings.companies_collection.find().projection({_id: 0}).to_a.to_json
 end
