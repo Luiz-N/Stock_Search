@@ -23,4 +23,4 @@ This branch makes a lot of architectural improvements and is a much more robust 
   The previous branch made all historical quote queries from the client side through a custom adapter to an external API which was ugly, inefficient, and basically a hack. The backend now has [a /companies/:symbol endpoint](https://github.com/Luiz-N/Stock_Search/blob/refactor/sinatraApp/backend.rb) which queries the host's database for historical quotes. If the database already has the latest 30 days of quotes for a company then the collection is immediately passed to the client in the expected format for ember-data. Otherwise the yahoo finance api is queried from the backend to update the db before passing the results to the client.
 
 
-![alt-tag](http://f.cl.ly/items/3k360f0R2y2P1M2z1Z1X/Image%202015-11-09%20at%2011.18.36%20PM.png)
+![alt-tag](http://f.cl.ly/items/2o012V0A431Q2n2T3K1t/Image%202015-11-09%20at%2011.23.37%20PM.png)
