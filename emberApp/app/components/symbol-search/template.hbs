@@ -1,12 +1,32 @@
 {{yield}}
-
-<div class="text-centered">
-  {{ember-selectize
-    content=contentArray
-    optionValuePath="content.symbol"
-    optionLabelPath="content.name"
-    placeholder="Search companies"
-    selection=symbolInput
-    select-item=updateModel
-  }}
+<div class="text-centered col-md-10 col-md-offset-1">
+  {{input
+    type="search"
+    value=filter
+    placeholder="Search Companies"
+    class="form-control"
+    }}
+  {{#if companiesFound}}
+    <span class="help-block text-centered">{{filteredCompanies.length}} result(s)</span>
+  {{/if}}
+</div>
+<div class="table-container">
+  {{#if companiesFound}}
+    <table class="table table-condensed table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Company Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each filteredCompanies as |company|}}
+          <tr {{action 'updateModel' company}}>
+            <td>{{company.symbol}}</td>
+            <td>{{company.name}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{/if}}
 </div>
