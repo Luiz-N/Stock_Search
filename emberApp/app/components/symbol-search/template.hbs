@@ -10,21 +10,23 @@
     <span class="help-block text-centered">{{filteredCompanies.length}} result(s)</span>
   {{/if}}
 </div>
-{{#if companiesFound}}
-  <table class="table table-condensed table-bordered table-hover">
-    <thead>
-      <tr>
-        <th>Symbol</th>
-        <th>Company Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each filteredCompanies as |company|}}
-        <tr {{action 'updateModel' company}}>
-          <td>{{company.symbol}}</td>
-          <td>{{company.name}}</td>
+<div class="table-container">
+  {{#if companiesFound}}
+    <table class="table table-condensed table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Company Name</th>
         </tr>
-      {{/each}}
-    </tbody>
-  </table>
-{{/if}}
+      </thead>
+      <tbody>
+        {{#each filteredCompanies as |company|}}
+          <tr {{action 'updateModel' company}}>
+            <td>{{company.symbol}}</td>
+            <td>{{company.name}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{/if}}
+</div>

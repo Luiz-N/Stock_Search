@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
-  symbolInput:        null,
   filter:             '',
   allCompanies:       Ember.inject.service('company-list'),
   companySorting:     ['name'],
@@ -26,11 +25,6 @@ export default Ember.Component.extend({
   didInsertElement: function () {
     this.get('allCompanies.fetch');
   },
-
-  contentArray: Ember.computed('allCompanies.contentArray', function () {
-    return this.get('allCompanies.contentArray');
-  }),
-
 
   actions: {
     updateModel: function(params) {
