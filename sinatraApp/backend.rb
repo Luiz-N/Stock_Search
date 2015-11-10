@@ -31,6 +31,7 @@ companies_array.each { |company|
 	company[:_id] = company[:symbol]
 }
 # Remove duplicates
+companies_array.uniq! { |company| company[:name] }
 companies_array.uniq! { |company| company[:_id] }
 # Seed DB
 settings.companies.insert_many(companies_array)
