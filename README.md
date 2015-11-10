@@ -12,7 +12,7 @@ This version is a major re-factor of the older master branch and corrects some k
 
 ## Changes
 
-This branch makes a lot of architectural improvements and is a much more robust solution. More importantly it follows the instructions of the assignment more closely.
+Several architectural improvements were made resulting in a much more robust solution.
 
 ### Use Case 1: Symbol Search
 
