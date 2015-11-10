@@ -7,14 +7,14 @@ export default DS.Model.extend({
   quotes      :   DS.attr(),
 
   chartTitle: Ember.computed('name', function () {
-    return this.get('name').split(' Stock')[0] + ' OHLC & Volume (Last 3 Months)';
+    return this.get('name').split(' Stock')[0] + ' OHLC & Volume (Last 30 Days)';
   }),
 
   candleStickData: Ember.computed('quotes', function () {
     var quotes = this.get('quotes');
 
     return quotes.map(function(quote, i) {
-      return Object.keys(quote).map(key => quote[key])
+      return Object.keys(quote).map(key => quote[key]);
     }).reverse();
   }),
 
