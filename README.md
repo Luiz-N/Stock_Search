@@ -1,6 +1,6 @@
 # Stock_Search
 
-This is a major re-factor of my previous submission and corrects some key requirements. The stack is the same except this time the much more reliable yahoo finance api is used in the backend instead of hacking it from the client side.  The setup instructions are the same however a new gem is added so a fresh bundle install is required. In the "Changes" section below I talk about each use case in reagrds to the corrections/enhancements that were made.
+This is a simple ember app that uses the yahoo api to make stock symbol queries. It also uses a mongodb in the backend.
 
 ## Setup:
 
